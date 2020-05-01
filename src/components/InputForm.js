@@ -14,18 +14,12 @@ const InputForm = props => {
     const bears = useSelector(state => state.bear)
     const addBear = async () => {
         await axios.post(`http://localhost/api/bears`, form)
-        // dispatch({
-        //     type: 'ADD_BEAR', bears: {
-        //         id: bears.length > 0 ? bears[bears.length - 1].id + 1 : 0,
-        //         ...form
-        //     }
-        // })
+
         actionsBear.addBear(bears, form)
     }
-    //const { data, onChange } = props;
     return (
         <div className='form-container'>
-            <h2>Add bear</h2>
+            <h2>Add student</h2>
             <table>
                 <tbody>
                     <tr>
@@ -35,7 +29,7 @@ const InputForm = props => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Weight</td>
+                        <td>sid</td>
                         <td>
                             <input className='inpt' type="number" onChange={(e) => actionsForm.changeWeight(e.target.value)} />
                         </td>

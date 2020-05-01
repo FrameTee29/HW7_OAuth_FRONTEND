@@ -29,11 +29,12 @@ export default () => {
     )
   }
   return (
-    <div>
-      <h2>Bears</h2>
+    <div style={{padding:"20px"}}>
+      <button type="button" class="btn btn-secondary btn-lg" onClick={() => actions.logout()}>SIGN OUT</button>
+      <h2>Students</h2>
       <BearList />
       <InputForm />
-      <Button variant="outline-danger" onClick={() => actions.logout()}>Logout</Button>
+      
     </div>
   )
 }
