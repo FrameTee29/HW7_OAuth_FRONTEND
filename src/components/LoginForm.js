@@ -26,7 +26,16 @@ const LoginForm = (props) => {
     return (
         <div>
             <div class="alert alert-primary" role="alert">
-                LOGIN WITH FACBOOK <button type="button" class="btn btn-primary" href={facebookLink}>LOGIN</button>
+
+                <div class="card">
+                    <h5 class="card-header">Facebook</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">login with facebook</h5>
+                        <div style={{width:"200px"}}><img  src="https://i.pinimg.com/originals/d7/c1/d0/d7c1d07b8d763870d4b59c10603ed092.png" class="card-img-top" alt="..."/></div>
+                        
+                        <Button variant="outline-primary" href={facebookLink}>LOGIN</Button>
+                    </div>
+                </div>
             </div>
             <div class="alert alert-success" role="alert">
                 <h1>PSU PASSPORT</h1>
