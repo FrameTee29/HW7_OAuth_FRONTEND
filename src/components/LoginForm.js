@@ -25,57 +25,27 @@ const LoginForm = (props) => {
     }
     return (
         <div>
-            <div className="d-flex justify-content-center">
-                <div className="d-flex flex-column bd-highlight mb-2">
-                    <h1>HELLO LOGIN HW8</h1>
-                    <div>
-                        <Card style={{ width: '20rem' }}>
-                            <Card.Img variant="top" src="https://www.beartai.com/wp-content/uploads/2015/07/facebook_2015_logo_detail.png" />
-                            <Card.Body>
-                                <Card.Title>Facebook LOGIN</Card.Title>
-                                <Card.Text>
-                                    Arim Cheberahim
-                                    6035512059
-                            </Card.Text>
-                                <Button variant="outline-primary" href={facebookLink}>LOGIN</Button>
-                            </Card.Body>
-                        </Card>
+            <div class="alert alert-primary" role="alert">
+                LOGIN WITH FACBOOK <button type="button" class="btn btn-primary" href={facebookLink}>LOGIN</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+                <h1>PSU PASSPORT</h1>
+
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">Username</span>
                     </div>
-                    {' '}
-                    <div>
-                        <div className="">
-                            <form>
-                                <div>
-                                    <div>
-                                        {/* USERNAME : <input type="text" name="username" />
-                            PASSWORD : <input type="password" name="password" /> */}
-                                        <div>
-                                            <Card style={{ width: '20rem' }}>
-                                                <Card.Img variant="top" src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png" />
-                                                <Card.Body>
-                                                    <Card.Title>PSU LOGIN</Card.Title>
-                                                    <Card.Text>
-                                                        <Form style={{ width: '18rem' }}>
-                                                            <Form.Group controlId="formBasicEmail">
-                                                                <Form.Label>Username</Form.Label>
-                                                                <Form.Control type="text" placeholder="Enter Username" name="username" onChange={(e)=>setUsername(e.target.value)}/>
-                                                            </Form.Group>
-                                                            <Form.Group controlId="formBasicPassword">
-                                                                <Form.Label>Password</Form.Label>
-                                                                <Form.Control type="password" placeholder="Password" name="password" onChange={(e)=>setPassword(e.target.value)}/>
-                                                            </Form.Group>
-                                                        </Form>
-                                                    </Card.Text>
-                                                    <Button variant="outline-primary" onClick={LoginPSU}>LOGIN</Button>
-                                                </Card.Body>
-                                            </Card>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setUsername(e.target.value)} />
                 </div>
+                <br></br>
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">password</span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping" onChange={(e) => setPassword(e.target.value)} />
+                </div>
+                <br></br>
+                <div><button type="button" class="btn btn-success" onClick={LoginPSU}>LOGIN</button></div>
             </div>
         </div>
     )
